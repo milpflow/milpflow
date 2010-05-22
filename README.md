@@ -8,8 +8,6 @@ Hi! This is a simple tutorial for you start using MILPFlow.
 How to start?
 =============
 
-* A tutorial in PDF format is available in this project folder.
-
 * MILPFlow Java project is available to download at: 
 
 ```
@@ -34,16 +32,21 @@ MILPFlow Deployment of the Paths:
 # ./executar_linha_comando.sh
 ```
 
-* Step 2: Start the topology for Mininet:
+* Step 2: Start the Ryu REST controller:
+
+```
+# cd ryu; ryu-manage --verbose ryu/app/ofctl_rest.py
+```
+
+* Step 3.1: Start the topology for Mininet (default):
 
 ```
 # ./modeloMininet_1000serv_500vm_ryu.py
 ```
 
-* Step 3: Start the Ryu REST controller:
-
+* Step 3.2: For more detailed running of Mininet, start the topology as follows (Note: due limitations of Mininet, for this example, you can not run 'switch ovsk' with 'dpctl 1.0'):
 ```
-# cd ryu; ryu-manage --verbose ryu/app/ofctl_rest.py
+# mn --custom modeloMininet_1000serv_500vm.py --topo ./modeloMininet_1000serv_500vm --switch user,protocols=OpenFlow13 --controller remote --link tc,bw=10,delay=10ms
 ```
 
 * Step 4: Deploy the paths:
@@ -149,8 +152,8 @@ After these measurements, you will be able to evaluate the performance results s
 Then, you can use your favorite software to read these files (Example: Gnumeric, R, Gnuplot, and others).
 
 
-Ryu controller with STP
-=======================
+Ryu STP
+=======
 
 Spanning Tree Protocol (STP) of the Ryu controller is currently working properly only with the DPCTL 1.0. 
 
