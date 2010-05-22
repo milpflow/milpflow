@@ -1,4 +1,4 @@
-MILPFlow
+MILPFlow 
 ========
 
 MILPFlow (Mixed Integer Linear Programming with OpenFlow) 
@@ -43,7 +43,7 @@ MILPFlow Deployment of the Paths:
 # mn --custom modeloMininet_1000serv_500vm.py --topo ./modeloMininet_1000serv_500vm --switch user,protocols=OpenFlow13 --controller remote --link tc,bw=10,delay=10ms
 ```
 
-* Step 3: Start the Ryu REST controller:
+* Step 3: Start the Ryu REST controller: 
 
 ```
 # cd ryu; ryu-manage --verbose ryu/app/ofctl_rest.py
