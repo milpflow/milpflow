@@ -10,8 +10,8 @@ MILPFlow Deployment of Paths:
 ----------------------------
 
 * Step 1: Solve the MILP model of data traffic:
-# cd /usr/local/src/workspace/MILPFlow-26
-# ./executar_linha_comando.sh
+*cd /usr/local/src/workspace/MILPFlow-26*
+*./executar_linha_comando.sh*
 
 * Step 2: Start the automatically generated topology:
 # ./modeloMininet_1000serv_500vm_ryu.py
