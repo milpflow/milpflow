@@ -5,6 +5,11 @@ MILPFlow (Mixed Integer Linear Programming with OpenFlow)
 
 Hi! This is a simple tutorial for you start using MILPFlow.
 
+Virtual Machine 1: DPCTL 1.3
+============================
+
+Our approach with MILPFlow is use the REST API of Ryu OpenFlow controller to set our data paths. However, STP algorithm of Ryu is not working properly with dpctl 1.3, so we provide two VM with similar configurations.
+
 
 MILPFlow Deployment of Paths:
 ----------------------------
@@ -127,3 +132,22 @@ mininet> h23 xterm&
 ```
 
 After measurements, you will be able to evaluate the performance results seeing the contenta of the generated *.txt files. Use you favorite software to read the files (Example: Gnumeric, R, Gnuplot, and others).
+
+
+Virtual Machine 2: DPCTL 1.0
+============================
+
+Spanning Tree Protocol (STP) of Ryu is currently working properly only with DPCTL 1.0, so we provide a similar VM with this configuration.
+
+
+* To run STP:
+
+```
+# ryu-manager ./simple_switch_stp_13.py
+```
+
+* In other terminal:
+
+```
+# ./modeloMininet_1000serv_500vm_ryu.py
+```
