@@ -19,7 +19,7 @@ MILPFlow Deployment of Paths:
 * Step 3: Start the Ryu REST controller:
 # cd ryu; ryu-manage --verbose ryu/app/ofctl_rest.py
 
-* Step 4: Deploy the paths:
+* Step 4: Deploy the paths :
 # chmod +x modeloLingo_1000serv_500vm_regrasOpenFlowRyu.sh
 # ./modeloLingo_1000serv_500vm_regrasOpenFlowRyu.sh
 (Note: if some rule was not deployed (HTTP 404 instead HTTP 200), restart 'ofctl_rest.py', and run this step again).
