@@ -28,16 +28,17 @@ MILPFlow Deployment of Paths:
 # cd ryu; ryu-manage --verbose ryu/app/ofctl_rest.py
 ```
 
-* Step 4: Deploy the paths :
+* Step 4: Deploy the paths:
+
+(Note: if some rule was not deployed (when you see HTTP 404 in 'ofctl_rest.py', instead HTTP 200), restart 'ofctl_rest.py', and run this step again).
 
 ```
 # chmod +x modeloLingo_1000serv_500vm_regrasOpenFlowRyu.sh
 # ./modeloLingo_1000serv_500vm_regrasOpenFlowRyu.sh
-(Note: if some rule was not deployed (HTTP 404 instead HTTP 200), restart 'ofctl_rest.py', and run this step again).
 ```
 
 * Step 5: Try the connectivity between the hosts:
-(Note: only the path between the hosts solved by MILPFlow will be deployed).
+(Note: only the paths between the hosts solved by MILPFlow will be available).
 
 
 ```
