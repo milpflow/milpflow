@@ -49,12 +49,15 @@ mininet> h18 ping h29
 TCP and UDP Performance Evaluation:
 --------------------------
 
-More precise results are acquired when you run the host-host TCP traffic evaluation all at the same time. If the MILP model was solved with MILPFlow, all the data traffic should be run without losses of packets.
+More precise results are acquired when you run the host-host TCP or UDP measurements in all hosts at the same time. If the MILP model was solved with MILPFlow, then the whole data traffic should be transfered without losses of packets between the hosts.
 
 For TCP evaluation use: *clientTCP.sh* and *serverTCP.sh*
 
 For UDP evaluation use: *clientUDP.sh* and *serverUDP.sh*
 
+
+Example of TCP evaluation:
+-------------------------
 
 * Start your TCP servers in each host:
 
