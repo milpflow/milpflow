@@ -9,17 +9,17 @@ Hi! This is a simple tutorial for you start using MILPFlow.
 MILPFlow Deployment of Paths:
 ----------------------------
 
-Step 1: Solve the MILP model of data traffic:
+* Step 1: Solve the MILP model of data traffic:
 # cd /usr/local/src/workspace/MILPFlow-26
 # ./executar_linha_comando.sh
 
-Step 2: Start the automatically generated topology:
+* Step 2: Start the automatically generated topology:
 # ./modeloMininet_1000serv_500vm_ryu.py
 
-Step 3: Start the Ryu REST controller:
+* Step 3: Start the Ryu REST controller:
 # cd ryu; ryu-manage --verbose ryu/app/ofctl_rest.py
 
-Step 4: Deploy the paths:
+* Step 4: Deploy the paths:
 # chmod +x modeloLingo_1000serv_500vm_regrasOpenFlowRyu.sh
 # ./modeloLingo_1000serv_500vm_regrasOpenFlowRyu.sh
 (Note: if some rule was not deployed (HTTP 404 instead HTTP 200), restart 'ofctl_rest.py', and run this step again).
