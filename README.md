@@ -10,6 +10,10 @@ Virtual Machine 1: DPCTL 1.3
 
 Our approach with MILPFlow is use the REST API of Ryu OpenFlow controller to set our data paths. However, STP algorithm of Ryu is not working properly with dpctl 1.3, so we provide two VM with similar configurations.
 
+MILPFlow also draw with GraphViz the data paths obtained in the topology. See:
+```
+# ls modeloGraphViz*.pdf
+```
 
 MILPFlow Deployment of Paths:
 ----------------------------
