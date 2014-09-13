@@ -149,5 +149,5 @@ Spanning Tree Protocol (STP) of Ryu is currently working properly only with DPCT
 * In other terminal:
 
 ```
-# ./modeloMininet_1000serv_500vm_ryu.py
+# mn --custom modeloMininet_1000serv_500vm.py --topo modeloMininet_1000serv_500vm --switch ovsk,protocols=OpenFlow13 --controller remote
 ```
