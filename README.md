@@ -5,10 +5,27 @@ MILPFlow (Mixed Integer Linear Programming with OpenFlow)
 
 Hi! This is a simple tutorial for you start using MILPFlow.
 
+How to start?
+=============
+
+* MILPFlow Java project is available to download at:
+
+```
+# git clone https://github.com/milpflow/milpflow
+```
+
+
 Virtual Machine 1: DPCTL 1.3
 ============================
 
-Our approach with MILPFlow is to use the REST API of the Ryu OpenFlow controller to set our data paths. However, STP algorithm of Ryu is not working properly with dpctl 1.3, so we provide two virtual machines (VM) with similar configurations.
+* The simplest way is to use our pre-configured VMs:
+
+```
+# git clone https://github.com/milpflowvm1/milpflowvm1
+# git clone https://github.com/milpflowvm2/milpflowvm2
+```
+
+Our approach with MILPFlow is to use the REST API of the Ryu OpenFlow controller to set our data paths. However, STP algorithm of Ryu is not working properly with dpctl 1.3, so we provide two VM with similar configurations.
 
 MILPFlow also draw with GraphViz the data paths obtained in the topology. 
 After running MILPFlow, the graphics will be available in:
