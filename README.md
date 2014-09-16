@@ -1,4 +1,4 @@
-Milpflow 
+MILPFlow
 ========
 
 MILPFlow (Mixed Integer Linear Programming with OpenFlow)
