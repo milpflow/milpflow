@@ -1,0 +1,82 @@
+MILPFlow-24:
+- Minor bug fixes
+
+MILPFlow-23:
+- Automatic creation of fattree topologies
+- Example with 4 PoD (Portion of the Data Center), 
+	See ConfSettings.java for more details. 
+	- Flow: source dest traffic
+	        69	80	500
+	
+MILPFlow-22:
+- Automatic creation of tree topologies
+- Note: Mininet tree are not useful for data centers. So, we evaluate fattrees.
+
+MILPFlow-21:
+- See modeloLingo_1000serv_500vm_fatree_large.brite
+- All individual flows are set correct
+- Restrictions: - many rules at same time can cause errors
+		- many splits in network can cause errors
+
+MILPFlow-20:
+- OpenFlow rules with splits. Tested only with fattree minimum topology 
+  (see: modeloLingo_1000serv_500vm.brite)
+
+MILPFlow-19:
+- Minor bug fixes
+- Restriction: flows can not repeat the source. Valid flows: 
+  	Flows:
+  	6	8	100
+  	7	7	200
+  	8	7	300
+  	9	6	10
+  	
+ - Multiple rules applied to the set of flows at one shot!
+
+
+MILPFlow-18:
+- Automatic creation of dpctl rules to OpenFlow1.3 
+
+MILPFlow-17:
+- Automatic generation of large scale mininet topologies (only linear here!).
+
+MILPFlow-16:
+- Minor bug fixes
+
+MILPFlow-15:
+- Mapping between Lingo model and openflow rules in mininet topology
+- English translating (in progress)
+- First functional version with multiple root nodes
+
+MILPFlow-14:
+- Mininet suporte
+
+MILPFlow-13:
+- Last Fit Decreasing
+
+MILPFlow-10:
+- Espacamento dos ToRs (antes tinha 24 por ToR, o que torna muito simples o trafego)
+ Com menos ToRs por rack: gerar o mesmo modelo Lingo com ateh 500VMs, mas 
+ aproveitar mais as rotas dentro da topologia. Ou seja, soh foi mudado o numero
+ de portas dos switches de acesso.
+- Melhoria da visualizacao do arquivo GraphViz
+
+
+MILPFlow-9:
+- Adicionado suporte a simulacao de trafego NF no NS-2
+- Adicionado modelo NS-2
+
+MILPFlow-8:
+- Adicionado o suporte a perda no trafego UDP (UDPBasicBurst)
+- Topologia TEM que ter o nodo que simula uma raiz para que
+  nao sejam geradas solucoes com grafos desconexos
+
+MILPFlow-7:
+- Trata a criacao do modelo OpenFlow para o Omnet
+- Corrigidos os fluxos entre os nodos sink e os nodos folha
+- Gerador do grafo dos caminhos resultantes com o graphviz (ferramenta dot)
+- Bug de nao exibir todos os caminhos dos ToRs
+- Adição de heurísticas para balanceamento de carga entre os caminhos 	
+
+MILPFlow-6:
+- Corrigidas as aplicações do tipo cliente/servidor entre os ToRs

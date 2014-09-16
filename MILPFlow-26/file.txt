@@ -1,0 +1,37 @@
+*** Creating network
+*** Adding controller
+*** Adding hosts:
+h1 h2 h3 h4 
+*** Adding switches:
+s1 s2 s3 
+*** Adding links:
+(h1, s2) (h2, s2) (h3, s3) (h4, s3) (s1, s2) (s1, s3) 
+*** Configuring hosts
+h1 h2 h3 h4 
+*** Starting controller
+*** Starting 3 switches
+s1 s2 s3 
+*** Starting CLI:
+h1 h1-eth0:s2-eth1
+h2 h2-eth0:s2-eth2
+h3 h3-eth0:s3-eth1
+h4 h4-eth0:s3-eth2
+s1 lo:  s1-eth1:s2-eth3 s1-eth2:s3-eth3
+s2 lo:  s2-eth1:h1-eth0 s2-eth2:h2-eth0 s2-eth3:s1-eth1
+s3 lo:  s3-eth1:h3-eth0 s3-eth2:h4-eth0 s3-eth3:s1-eth2
+c0
+*** s1 ------------------------------------------------------------------------
+dpctl: Error connecting to switch show. (Address family not supported by protocol)
+*** s2 ------------------------------------------------------------------------
+dpctl: Error connecting to switch show. (Address family not supported by protocol)
+*** s3 ------------------------------------------------------------------------
+dpctl: Error connecting to switch show. (Address family not supported by protocol)
+*** Stopping 1 controllers
+c0 
+*** Stopping 3 switches
+s1 ..s2 ...s3 ...
+*** Stopping 4 hosts
+h1 h2 h3 h4 
+*** Done
+completed in 6.617 seconds
+mininet> mininet> mininet> 

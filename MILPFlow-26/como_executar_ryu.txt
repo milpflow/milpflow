@@ -1,0 +1,10 @@
+Passo-a-passo para executar as simulacoes com
+as topologias no controlador Ryu:
+
+./executar_linha_comando.sh
+cd ~/ryu
+cp ~/modeloMininet* .
+chmod +x modeloMininet* 
+Terminal 1: ./modeloMininet.py
+Terminal 2: ./modeloMininet.sh
+Terminal 2: ryu-manager ./simple_switch_stp_13.py
