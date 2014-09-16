@@ -8,25 +8,25 @@ Hi! This is a simple tutorial for you start using MILPFlow.
 Virtual Machine 1: DPCTL 1.3
 ============================
 
-Our approach with MILPFlow is use the REST API of Ryu OpenFlow controller to set our data paths. However, STP algorithm of Ryu is not working properly with dpctl 1.3, so we provide two VM with similar configurations.
+Our approach with MILPFlow is to use the REST API of the Ryu OpenFlow controller to set our data paths. However, STP algorithm of Ryu is not working properly with dpctl 1.3, so we provide two virtual machines (VM) with similar configurations.
 
 MILPFlow also draw with GraphViz the data paths obtained in the topology. 
-After run MILPFlow, the graphics are in:
+After running MILPFlow, the graphics will be available in:
 ```
 # ls ~/modeloGraphViz*.pdf
 ```
 
-MILPFlow Deployment of Paths:
-----------------------------
+MILPFlow Deployment of the Paths:
+---------------------------------
 
-* Step 1: Solve the MILP model of data traffic:
+* Step 1: Solve the MILP model of the data traffic:
 
 ```
 # cd /usr/local/src/workspace/MILPFlow-26
 # ./executar_linha_comando.sh
 ```
 
-* Step 2: Start the automatically generated topology for Mininet:
+* Step 2: Start the topology for Mininet:
 
 ```
 # ./modeloMininet_1000serv_500vm_ryu.py
@@ -40,7 +40,7 @@ MILPFlow Deployment of Paths:
 
 * Step 4: Deploy the paths:
 
-(Note: if some rule was not deployed (when you see HTTP 404 in 'ofctl_rest.py', instead HTTP 200), restart 'ofctl_rest.py', and run this step again).
+(Note: if some rule was not deployed (when occur HTTP 404 in 'ofctl_rest.py', instead HTTP 200), it is necessary to restart 'ofctl_rest.py', and run this step again).
 
 ```
 # chmod +x modeloLingo_1000serv_500vm_regrasOpenFlowRyu.sh
@@ -48,7 +48,8 @@ MILPFlow Deployment of Paths:
 ```
 
 * Step 5: Try the connectivity between the hosts:
-(Note: only the paths between the hosts solved by MILPFlow will be available).
+(Note that only the paths between the hosts solved by MILPFlow will be 
+connected).
 
 
 ```
@@ -59,7 +60,7 @@ mininet> h18 ping h29
 TCP and UDP Performance Evaluation:
 --------------------------
 
-More precise results are acquired when you run the host-host TCP or UDP measurements in all hosts at the same time. If the MILP model was solved with MILPFlow, then the whole data traffic should be transfered without losses of packets between the hosts.
+More accurate results are obtained when you run the host-host TCP or UDP measurements in all hosts at the same time. If the MILP model was solved with MILPFlow, then the whole data traffic should be transfered without losses of packets between the hosts.
 
 We provide two automatized scripts to run 30 samples in each host:
 
@@ -71,7 +72,7 @@ We provide two automatized scripts to run 30 samples in each host:
 Example of TCP evaluation:
 -------------------------
 
-* Start your TCP servers in each host:
+* Start your TCP server application in each host:
 
 ```
 mininet> h29 xterm&
@@ -104,7 +105,7 @@ mininet> h24 xterm&
 ```
 
 
-* Start your TCP clients in each host:
+* Start your TCP client application in each host:
 
 ```
 mininet> h18 xterm&
@@ -136,13 +137,14 @@ mininet> h23 xterm&
 #./clientTCP.sh 10.0.0.7
 ```
 
-After measurements, you will be able to evaluate the performance results seeing the contenta of the generated *.txt files. Use you favorite software to read the files (Example: Gnumeric, R, Gnuplot, and others).
+After these measurements, you will be able to evaluate the performance results seeing the contenta of the generated *.txt files. We provide the *IperfParser* software, in the folder of this project, to simplify the acquirement of the data.
+Then, you can use your favorite software to read these files (Example: Gnumeric, R, Gnuplot, and others).
 
 
 Virtual Machine 2: DPCTL 1.0
 ============================
 
-Spanning Tree Protocol (STP) of Ryu is currently working properly only with DPCTL 1.0, so we provide a similar VM with this configuration.
+Spanning Tree Protocol (STP) of the Ryu controller is currently working properly only with the DPCTL 1.0. Then, we provide a similar VM with this configuration.
 
 
 * To run STP:
@@ -151,8 +153,13 @@ Spanning Tree Protocol (STP) of Ryu is currently working properly only with DPCT
 # ryu-manager ./simple_switch_stp_13.py
 ```
 
-* In other terminal:
+* In the other terminal:
 
 ```
 # mn --custom modeloMininet_1000serv_500vm.py --topo modeloMininet_1000serv_500vm --switch ovsk,protocols=OpenFlow13 --controller remote
 ```
+
+Doubts, questions or comments?
+==============================
+
+Send an e-mail: outrosdiasvirao at gmail dot com
