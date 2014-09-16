@@ -22,7 +22,7 @@ MILPFlow Deployment of the Paths:
 * Step 1: Solve the MILP model of the data traffic:
 
 ```
-# cd /usr/local/src/workspace/MILPFlow-26
+# cd milpflow/MILPFlow-26
 # ./executar_linha_comando.sh
 ```
 
