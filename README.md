@@ -14,18 +14,7 @@ How to start?
 # git clone https://github.com/milpflow/milpflow
 ```
 
-
-Virtual Machine 1: DPCTL 1.3
-============================
-
-* The simplest way is to use our pre-configured VMs:
-
-```
-# git clone https://github.com/milpflowvm1/milpflowvm1
-# git clone https://github.com/milpflowvm2/milpflowvm2
-```
-
-Our approach with MILPFlow is to use the REST API of the Ryu OpenFlow controller to set our data paths. However, STP algorithm of Ryu is not working properly with dpctl 1.3, so we provide two VM with similar configurations.
+Our approach with MILPFlow is to use the REST API of the Ryu OpenFlow controller to set our data paths. However, STP algorithm of Ryu is limited about the running with dpctl 1.3.
 
 MILPFlow also draw with GraphViz the data paths obtained in the topology. 
 After running MILPFlow, the graphics will be available in:
@@ -158,10 +147,10 @@ After these measurements, you will be able to evaluate the performance results s
 Then, you can use your favorite software to read these files (Example: Gnumeric, R, Gnuplot, and others).
 
 
-Virtual Machine 2: DPCTL 1.0
-============================
+Ryu STP
+=======
 
-Spanning Tree Protocol (STP) of the Ryu controller is currently working properly only with the DPCTL 1.0. Then, we provide a similar VM with this configuration.
+Spanning Tree Protocol (STP) of the Ryu controller is currently working properly only with the DPCTL 1.0. 
 
 
 * To run STP:
