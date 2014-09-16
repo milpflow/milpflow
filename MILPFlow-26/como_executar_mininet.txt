@@ -1,0 +1,3 @@
+mn --custom ~/modeloMininet_1000serv_500vm.py --topo modeloMininet_1000serv_500vm --controller remote
+
+pox.py forwarding.l3_learning

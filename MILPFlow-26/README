@@ -1,0 +1,31 @@
+
+MILPFlow
+
+Author: Lucio A. Rocha (outrosdiasvirao at gmail dot com)
+Last Update: May 2014
+
+---
+To simulations with many VMs is necessary to allocate more 
+virtual memory to Lingo. So, in Lingo shell (to reserve at least 1Gb):
+: SET MXMEMB 1000000
+: FREEZE
+: QUIT
+
+CPU
+: SET LCORES 4
+: FREEZE
+
+To limit Lingo iteractions:
+: SET ITRLIM 150000
+: FREEZE
+
+To recover a range (sensibility analysis):
+: SET DUALCO 2
+: FREEZE
+
+Help:
+: HELP SET
+
+More commands are listed in Lingo manual.
+
+Not hesitate in contact me for any help about MILPFlow usage :-)
