@@ -149,8 +149,8 @@ After these measurements, you will be able to evaluate the performance results s
 Then, you can use your favorite software to read these files (Example: Gnumeric, R, Gnuplot, and others).
 
 
-Ryu STP
-=======
+Ryu controller with STP
+=======================
 
 Spanning Tree Protocol (STP) of the Ryu controller is currently working properly only with the DPCTL 1.0. 
 
