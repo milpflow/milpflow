@@ -8,7 +8,7 @@ Hi! This is a simple tutorial for you start using MILPFlow.
 How to start?
 =============
 
-* MILPFlow Java project is available to download at:
+* MILPFlow Java project is available to download at: 
 
 ```
 # git clone https://github.com/milpflow/milpflow
