@@ -1,4 +1,4 @@
-MILPFlow 
+MILPFlow  
 ========
 
 MILPFlow (Mixed Integer Linear Programming with OpenFlow) 
@@ -174,4 +174,6 @@ Spanning Tree Protocol (STP) of the Ryu controller is currently working properly
 Doubts, questions or comments?
 ==============================
 
-Send an e-mail: outrosdiasvirao at gmail dot com 
+Firstly, read the tutorial documentation in this project.
+
+If you still need help, send an e-mail: outrosdiasvirao at gmail dot com 
