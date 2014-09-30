@@ -7,19 +7,19 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * IperfParser for Iperf results 
+ * IperfParser for Iperf results
  * 
  * How to run:
  * - 1) Use iperf scripts of MILPFlow project to collect its data
  * - 2) Run this file to parse the results
- * - 3) Open a editor to replace the string "0.0- " with "0.0-" (note this this replace is only to remove the space)
- * - 4) Use Gnumeric to plot its results
+ * - 3) Open a editor to replace the string "0.0- " with "0.0-" FROM THE OUTPUT FILES, NOT THE ORIGINAL FILES (note this this replace is only to remove the space)
+ * - 4) Use Gnumeric to get external data plot its results (note open the OUTPUT FILES directly) 
  * 
  * 
  * @author Lucio A. Rocha
  *
  */
-
+ 
 public class IperfParser {
 
 	String PATH="/home/lucio/novos_resultados_artigo_im_2015/milpflow/";
