@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 #Ex.: serverTCP.sh result_hA_hB_tcp_5m.txt
 
-iperf -s -i 5 > $1 
+iperf -s -fm -i 5 > $1 
