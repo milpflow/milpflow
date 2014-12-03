@@ -5,6 +5,13 @@ MILPFlow (Mixed Integer Linear Programming with OpenFlow)
 
 Hi! This is a simple tutorial for you start using MILPFlow.
 
+How to reference?
+=================
+Rocha, L. A. and Verdi, F. L. "MILPFlow: a Toolset
+for Integration of Computational Modelling and
+Deployment of Data Paths for SDN", IFIP/IEEE IM 2015, Ottawa, Canada.
+
+
 How to start?
 =============
 
